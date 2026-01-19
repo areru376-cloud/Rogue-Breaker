@@ -343,7 +343,8 @@ const App: React.FC = () => {
       itemsRef.current.forEach(item => {
         const x = item.gridX * BLOCK_SIZE + BLOCK_SIZE / 2, y = item.gridY * BLOCK_SIZE + BLOCK_SIZE / 2;
         ctx.beginPath(); ctx.arc(x, y, BLOCK_SIZE / 4, 0, Math.PI * 2); ctx.strokeStyle = '#00ffcc'; ctx.lineWidth = 3; ctx.stroke();
-        ctx.fillStyle = '#00ffcc'; ctx.font = 'bold 20px sans-serif'; ctx.fillText('+', x, y);
+        ctx.fillStyle = '#00ffcc'; ctx.font = 'bold 20px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('+', x, y);
       });
 
       particlesRef.current.forEach(p => {
@@ -457,7 +458,7 @@ const App: React.FC = () => {
                </div>
                <div className="text-right">
                   <p className="text-[10px] text-gray-500 font-black tracking-tighter uppercase opacity-70">Build</p>
-                  <p className="text-xs font-mono text-gray-400">v1.8.0</p>
+                  <p className="text-xs font-mono text-gray-400">v2.1.0</p>
                </div>
             </div>
 
@@ -538,7 +539,7 @@ const App: React.FC = () => {
       </div>
 
       <div className="mt-8 text-center px-4 opacity-40">
-        <p className="text-[10px] text-gray-500 uppercase tracking-[0.6em] font-black">Engine v1.8.0 • Adaptive UI Mode</p>
+        <p className="text-[10px] text-gray-500 uppercase tracking-[0.6em] font-black">Engine v2.1.0 • No Gap Matrix</p>
       </div>
     </div>
   );
